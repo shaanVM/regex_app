@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+ 
+</head>
+
+    <h1 style="color: #344f71;">REGULAR EXPRESSION 101</h1>
+    <form action="/results">
+        REGULAR EXPRESSION<br>
+        <input type="text" name='user_regex' placeholder="insert your regular expression here"></input><br>
+        TEST STRING<br>
+        <input type="text" name="user_text" placeholder="insert your test string here"></input><br>
+        <input style="background-color: rgb(160, 160, 160)" type='submit' value="SUBMIT">
+    </form>
+
+    <h4 style="color: #344f71;">ENTERED TEXT            :   {{u_text}} </h4> <br>
+    <h4 style="color: #344f71;">ENTERED REGULAR EXPRESSION  : {{u_regex}}</h4><br>
+
+    <h4 style="color: #344f71;" >MATCH              :        {{text1}}</h4><br>
+
+<h1>***********************************************************************************************</h1>
+
+
+    <form action="/email_validation" method="post">
+       <h1 style="color: #344f71;"> EMAIL VALIDATION  </h1><br>
+        EMAIL ID<br>
+        <input  type="text" name='user_email' placeholder="Enter email ID"><br>
+        <input style="background-color: rgb(160, 160, 160) ;" type="submit" value="SUBMIT">
+    </form>
+
+    <h4 style="color: #344f71;">ENTERED EMAIL IS :</h4>
+    {% if is_valid_email %} 
+        Valid 
+    {% else %}
+        Invalid 
+    {% endif %}
+
+</body>
+</html>
